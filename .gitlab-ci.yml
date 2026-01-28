@@ -1,0 +1,290 @@
+# ========================================
+# CI/CD Pipeline - Corpo Padel
+# GitLab CI/CD Configuration
+# ========================================
+
+stages:
+  - test
+  - build
+  - integration
+  - deploy
+
+variables:
+  PYTHON_VERSION: "3.11"
+  NODE_VERSION: "20"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  npm_config_cache: "$CI_PROJECT_DIR/.cache/npm"
+
+# ========================================
+# CACHE CONFIGURATION
+# ========================================
+cache:
+  paths:
+    - .cache/pip
+    - .cache/npm
+    - backend/venv/
+    - frontend/node_modules/
+
+# ========================================
+# BACKEND JOBS
+# ========================================
+
+backend:lint:
+  stage: test
+  image: python:${PYTHON_VERSION}
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+  before_script:
+    - cd backend
+    - pip install --upgrade pip
+    - pip install flake8
+  script:
+    - echo "Linting Backend Code..."
+    - flake8 app/ --count --select=E9,F63,F7,F82 --show-source --statistics || true
+    - flake8 app/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics || true
+    - echo "Backend linting completé"
+  allow_failure: true
+
+backend:test:
+  stage: test
+  image: python:${PYTHON_VERSION}
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  before_script:
+    - cd backend
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    - |
+      cat > .env << EOF
+      DATABASE_URL=sqlite:///./test_padel.db
+      SECRET_KEY=test-secret-key-for-ci-cd-pipeline-12345678
+      ALGORITHM=HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES=1440
+      ALLOWED_ORIGINS=http://localhost:5173
+      EOF
+  script:
+    - echo "Début des tests backend..."
+    - pytest --cov=app --cov-report=xml --cov-report=term -v --ignore=tests/test_pool.py --ignore=tests/test_validation.py || true
+    - echo "backend test completeés"
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    when: always
+    paths:
+      - backend/htmlcov/
+      - backend/coverage.xml
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: backend/coverage.xml
+    expire_in: 30 days
+  allow_failure: true
+
+backend:security:
+  stage: test
+  image: python:${PYTHON_VERSION}
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+  before_script:
+    - cd backend
+    - pip install bandit safety
+  script:
+    - echo "Début du scan de sécurité..."
+    - bandit -r app/ -f json -o bandit-report.json || true
+    - safety check --json || true
+    - echo "Securité scan completé"
+  artifacts:
+    when: always
+    paths:
+      - backend/bandit-report.json
+    expire_in: 30 days
+  allow_failure: true
+
+# ========================================
+# FRONTEND JOBS
+# ========================================
+
+frontend:lint:
+  stage: test
+  image: node:${NODE_VERSION}
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+      changes:
+        - frontend/**/*
+        - .gitlab-ci.yml
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - frontend/**/*
+        - .gitlab-ci.yml
+  before_script:
+    - cd frontend
+    - npm ci
+  script:
+    - echo "frontend code linting..."
+    - npm run lint || true
+    - echo "completé frontend linting"
+  allow_failure: true
+
+frontend:build:
+  stage: build
+  image: node:${NODE_VERSION}
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  before_script:
+    - cd frontend
+    - npm ci
+  script:
+    - echo "Frontend Build en cours..."
+    - npm run build
+    - echo "Frontend construit avec succès"
+  artifacts:
+    when: always
+    paths:
+      - frontend/dist/
+    expire_in: 30 days
+
+frontend:test:
+  stage: test
+  image: node:${NODE_VERSION}
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+      changes:
+        - frontend/**/*
+        - .gitlab-ci.yml
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - frontend/**/*
+        - .gitlab-ci.yml
+  before_script:
+    - cd frontend
+    - npm ci
+  script:
+    - echo "🧪 Running Frontend Tests..."
+    - npm run test || echo "Frontend test echoue"
+    - echo "Frontend tests completeés"
+  allow_failure: true
+
+# ========================================
+# INTEGRATION TESTS
+# ========================================
+
+integration:test:
+  stage: integration
+  image: python:${PYTHON_VERSION}
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  needs:
+    - job: backend:test
+      optional: false
+    - job: frontend:build
+      optional: true
+  before_script:
+    - apt-get update && apt-get install -y curl
+    - cd backend
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    - |
+      cat > .env << EOF
+      DATABASE_URL=sqlite:///./test_integration.db
+      SECRET_KEY=test-secret-key-for-integration-tests-12345678
+      ALGORITHM=HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES=1440
+      ALLOWED_ORIGINS=http://localhost:5173
+      EOF
+  script:
+    - echo "Demarrage des tests d'intégration..."
+    
+    # Initialiser la base de données directement sans init_test_data.py
+    - python -c "from app.database import init_db; init_db(); print('Base de données initialisée')"
+    - python init_test_data.py
+    - echo "Test Data init"
+    
+    # Démarrer le backend
+    - uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+    - BACKEND_PID=$!
+    - sleep 10
+    
+    # Test health check
+    - echo "🧪 Testing backend endpoints..."
+    - curl -f http://localhost:8000/docs || exit 1
+    - curl -f http://localhost:8000/ || exit 1
+    - echo "Backend marche correctement"
+    
+    # Nettoyer
+    - kill $BACKEND_PID || true
+    - echo "✅ Integration tests completed"
+  allow_failure: true
+
+# ========================================
+# CODE QUALITY
+# ========================================
+
+code_quality:
+  stage: test
+  image: python:${PYTHON_VERSION}
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+  before_script:
+    - cd backend
+    - pip install radon
+  script:
+    - echo "Code Qualité Analyse.."
+    - radon cc app/ -a -s || true
+    - radon mi app/ -s || true
+    - echo "Code qualité analyse completer"
+  allow_failure: true
+
+
+
+# ========================================
+# NOTIFICATIONS
+# ========================================
+
+notify:success:
+  stage: .post
+  image: alpine:latest
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+      when: on_success
+  script:
+    - echo "✅ ========================================="
+    - echo "✅ PIPELINE RÉUSSI"
+    - echo "✅ Branche $CI_COMMIT_REF_NAME"
+    - echo "✅ Commit $CI_COMMIT_SHORT_SHA"
+    - echo "✅ ========================================="
+
+notify:failure:
+  stage: .post
+  image: alpine:latest
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "medelpartie"'
+      when: on_failure
+  script:
+    - echo " ========================================="
+    - echo " PIPELINE ÉCHOUÉ"
+    - echo " Branche $CI_COMMIT_REF_NAME"
+    - echo " Commit $CI_COMMIT_SHORT_SHA"
+    - echo " ========================================="

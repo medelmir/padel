@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">Rapport.html</title>
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1 id="title">Rapport.html</h1>
+    <p>Report generated on 26-Jan-2026 at 21:06:42 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.2.0</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</td>
+        </tr>
+      </tbody>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left">&lt;</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">&gt;</div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">55 tests took 00:00:24.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" >
+            <span class="failed">3 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" >
+            <span class="passed">52 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled>
+            <span class="rerun">0 Reruns</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="retried" disabled>
+            <span class="retried">0 Retried,</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.0&#34;, &#34;Platform&#34;: &#34;Windows-11-10.0.26200-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;7.4.3&#34;, &#34;pluggy&#34;: &#34;1.6.0&#34;}, &#34;Plugins&#34;: {&#34;anyio&#34;: &#34;3.7.1&#34;, &#34;asyncio&#34;: &#34;0.21.1&#34;, &#34;cov&#34;: &#34;4.1.0&#34;, &#34;html&#34;: &#34;4.2.0&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}, &#34;JAVA_HOME&#34;: &#34;C:\\Program Files\\Java\\jdk-11&#34;}, &#34;tests&#34;: {&#34;tests/test_admin.py::test_generate_temporary_password_contains_required_characters&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_admin.py::test_generate_temporary_password_contains_required_characters&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_admin.py::test_generate_temporary_password_contains_required_characters&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_admin.py::test_get_all_accounts_returns_linked_player_data&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_admin.py::test_get_all_accounts_returns_linked_player_data&#34;, &#34;duration&#34;: &#34;672 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_admin.py::test_get_all_accounts_returns_linked_player_data&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;672 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_admin.py::test_get_players_without_account_lists_only_unlinked_players&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_admin.py::test_get_players_without_account_lists_only_unlinked_players&#34;, &#34;duration&#34;: &#34;604 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_admin.py::test_get_players_without_account_lists_only_unlinked_players&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;604 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_admin.py::test_create_account_for_player_creates_user_and_links_player&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_admin.py::test_create_account_for_player_creates_user_and_links_player&#34;, &#34;duration&#34;: &#34;817 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_admin.py::test_create_account_for_player_creates_user_and_links_player&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;817 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_admin.py::test_reset_user_password_sets_temporary_password&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_admin.py::test_reset_user_password_sets_temporary_password&#34;, &#34;duration&#34;: &#34;00:00:01&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_admin.py::test_reset_user_password_sets_temporary_password&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:01&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_admin.py::test_toggle_user_active_flips_status&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_admin.py::test_toggle_user_active_flips_status&#34;, &#34;duration&#34;: &#34;619 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_admin.py::test_toggle_user_active_flips_status&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;619 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_admin.py::test_delete_user_account_removes_user_and_unlinks_player&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_admin.py::test_delete_user_account_removes_user_and_unlinks_player&#34;, &#34;duration&#34;: &#34;588 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_admin.py::test_delete_user_account_removes_user_and_unlinks_player&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;588 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_auth.py::test_login_success&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_auth.py::test_login_success&#34;, &#34;duration&#34;: &#34;571 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_auth.py::test_login_success&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;571 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_auth.py::test_login_invalid_email&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_auth.py::test_login_invalid_email&#34;, &#34;duration&#34;: &#34;363 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_auth.py::test_login_invalid_email&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;363 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    async def receive(self) -&amp;gt; T_co:\n        await checkpoint()\n        try:\n&amp;gt;           return self.receive_nowait()\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:98: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    def receive_nowait(self) -&amp;gt; T_co:\n        &amp;quot;&amp;quot;&amp;quot;\n        Receive the next item if it can be done without waiting.\n    \n        :return: the received item\n        :raises ~anyio.ClosedResourceError: if this send stream has been closed\n        :raises ~anyio.EndOfStream: if the buffer is empty and this stream has been\n            closed from the sending end\n        :raises ~anyio.WouldBlock: if there are no items in the buffer and no tasks\n            waiting to send\n    \n        &amp;quot;&amp;quot;&amp;quot;\n        if self._closed:\n            raise ClosedResourceError\n    \n        if self._state.waiting_senders:\n            # Get the item from the next sender\n            send_event, item = self._state.waiting_senders.popitem(last=False)\n            self._state.buffer.append(item)\n            send_event.set()\n    \n        if self._state.buffer:\n            return self._state.buffer.popleft()\n        elif not self._state.open_send_channels:\n            raise EndOfStream\n    \n&amp;gt;       raise WouldBlock\nE       anyio.WouldBlock\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:93: WouldBlock\n\nDuring handling of the above exception, another exception occurred:\n\nrequest = &amp;lt;starlette.requests.Request object at 0x0000022F78FFD100&amp;gt;\n\n    async def call_next(request: Request) -&amp;gt; Response:\n        app_exc: typing.Optional[Exception] = None\n        send_stream, recv_stream = anyio.create_memory_object_stream()\n    \n        async def receive_or_disconnect() -&amp;gt; Message:\n            if response_sent.is_set():\n                return {&amp;quot;type&amp;quot;: &amp;quot;http.disconnect&amp;quot;}\n    \n            async with anyio.create_task_group() as task_group:\n    \n                async def wrap(func: typing.Callable[[], typing.Awaitable[T]]) -&amp;gt; T:\n                    result = await func()\n                    task_group.cancel_scope.cancel()\n                    return result\n    \n                task_group.start_soon(wrap, response_sent.wait)\n                message = await wrap(request.receive)\n    \n            if response_sent.is_set():\n                return {&amp;quot;type&amp;quot;: &amp;quot;http.disconnect&amp;quot;}\n    \n            return message\n    \n        async def close_recv_stream_on_response_sent() -&amp;gt; None:\n            await response_sent.wait()\n            recv_stream.close()\n    \n        async def send_no_error(message: Message) -&amp;gt; None:\n            try:\n                await send_stream.send(message)\n            except anyio.BrokenResourceError:\n                # recv_stream has been closed, i.e. response_sent has been set.\n                return\n    \n        async def coro() -&amp;gt; None:\n            nonlocal app_exc\n    \n            async with send_stream:\n                try:\n                    await self.app(scope, receive_or_disconnect, send_no_error)\n                except Exception as exc:\n                    app_exc = exc\n    \n        task_group.start_soon(close_recv_stream_on_response_sent)\n        task_group.start_soon(coro)\n    \n        try:\n&amp;gt;           message = await recv_stream.receive()\n\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:78: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    async def receive(self) -&amp;gt; T_co:\n        await checkpoint()\n        try:\n            return self.receive_nowait()\n        except WouldBlock:\n            # Add ourselves in the queue\n            receive_event = Event()\n            container: list[T_co] = []\n            self._state.waiting_receivers[receive_event] = container\n    \n            try:\n                await receive_event.wait()\n            except get_cancelled_exc_class():\n                # Ignore the immediate cancellation if we already received an item, so as not to\n                # lose it\n                if not container:\n                    raise\n            finally:\n                self._state.waiting_receivers.pop(receive_event, None)\n    \n            if container:\n                return container[0]\n            else:\n&amp;gt;               raise EndOfStream\nE               anyio.EndOfStream\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:118: EndOfStream\n\nDuring handling of the above exception, another exception occurred:\n\nclient = &amp;lt;starlette.testclient.TestClient object at 0x0000022F78EA7530&amp;gt;\ntest_user = &amp;lt;app.models.models.User object at 0x0000022F78EA7830&amp;gt;\n\n    def test_login_invalid_email(client, test_user):\n        &amp;quot;&amp;quot;&amp;quot;Test connexion avec email invalide&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       response = client.post(&amp;quot;/api/v1/auth/login&amp;quot;, json={\n            &amp;quot;email&amp;quot;: &amp;quot;wrong@example.com&amp;quot;,\n            &amp;quot;password&amp;quot;: &amp;quot;ValidP@ssw0rd123&amp;quot;\n        })\n\ntests\\test_auth.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nvenv\\Lib\\site-packages\\starlette\\testclient.py:590: in post\n    return super().post(\nvenv\\Lib\\site-packages\\httpx\\_client.py:1132: in post\n    return self.request(\nvenv\\Lib\\site-packages\\starlette\\testclient.py:465: in request\n    return super().request(\nvenv\\Lib\\site-packages\\httpx\\_client.py:814: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\nvenv\\Lib\\site-packages\\httpx\\_client.py:901: in send\n    response = self._send_handling_auth(\nvenv\\Lib\\site-packages\\httpx\\_client.py:929: in _send_handling_auth\n    response = self._send_handling_redirects(\nvenv\\Lib\\site-packages\\httpx\\_client.py:966: in _send_handling_redirects\n    response = self._send_single_request(request)\nvenv\\Lib\\site-packages\\httpx\\_client.py:1002: in _send_single_request\n    response = transport.handle_request(request)\nvenv\\Lib\\site-packages\\starlette\\testclient.py:342: in handle_request\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\testclient.py:339: in handle_request\n    portal.call(self.app, scope, receive, send)\nvenv\\Lib\\site-packages\\anyio\\from_thread.py:277: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py:456: in result\n    return self.__get_result()\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py:401: in __get_result\n    raise self._exception\nvenv\\Lib\\site-packages\\anyio\\from_thread.py:217: in _call_func\n    retval = await retval\nvenv\\Lib\\site-packages\\fastapi\\applications.py:1106: in __call__\n    await super().__call__(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\applications.py:122: in __call__\n    await self.middleware_stack(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\errors.py:184: in __call__\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\errors.py:162: in __call__\n    await self.app(scope, receive, _send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:108: in __call__\n    response = await self.dispatch_func(request, call_next)\napp\\main.py:40: in add_security_headers\n    response = await call_next(request)\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:84: in call_next\n    raise app_exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:70: in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\nvenv\\Lib\\site-packages\\starlette\\middleware\\cors.py:83: in __call__\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\exceptions.py:79: in __call__\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\exceptions.py:68: in __call__\n    await self.app(scope, receive, sender)\nvenv\\Lib\\site-packages\\fastapi\\middleware\\asyncexitstack.py:20: in __call__\n    raise e\nvenv\\Lib\\site-packages\\fastapi\\middleware\\asyncexitstack.py:17: in __call__\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:718: in __call__\n    await route.handle(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:276: in handle\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:66: in app\n    response = await func(request)\nvenv\\Lib\\site-packages\\fastapi\\routing.py:274: in app\n    raw_response = await run_endpoint_function(\nvenv\\Lib\\site-packages\\fastapi\\routing.py:193: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\nvenv\\Lib\\site-packages\\starlette\\concurrency.py:41: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func, *args)\nvenv\\Lib\\site-packages\\anyio\\to_thread.py:33: in run_sync\n    return await get_asynclib().run_sync_in_worker_thread(\nvenv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py:877: in run_sync_in_worker_thread\n    return await future\nvenv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py:807: in run\n    result = context.run(func, *args)\napp\\api\\auth.py:83: in login\n    check_and_update_attempts(db, credentials.email, success=False)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ndb = &amp;lt;sqlalchemy.orm.session.Session object at 0x0000022F78EA73B0&amp;gt;, email = &amp;#x27;wrong@example.com&amp;#x27;, success = False\n\n    def check_and_update_attempts(db: Session, email: str, success: bool = False):\n        &amp;quot;&amp;quot;&amp;quot;V\u00e9rifie et met \u00e0 jour les tentatives de connexion&amp;quot;&amp;quot;&amp;quot;\n        attempt = db.query(LoginAttempt).filter(LoginAttempt.email == email).first()\n    \n        if not attempt:\n            attempt = LoginAttempt(email=email)\n            db.add(attempt)\n    \n        now = datetime.utcnow()\n    \n        # V\u00e9rifier si le compte est bloqu\u00e9\n        if attempt.locked_until and attempt.locked_until &amp;gt; now:\n            minutes_remaining = int((attempt.locked_until - now).total_seconds() / 60)\n            raise HTTPException(\n                status_code=status.HTTP_403_FORBIDDEN,\n                detail={\n                    &amp;quot;message&amp;quot;: &amp;quot;Compte bloqu\u00e9&amp;quot;,\n                    &amp;quot;locked_until&amp;quot;: attempt.locked_until.isoformat(),\n                    &amp;quot;minutes_remaining&amp;quot;: minutes_remaining\n                }\n            )\n    \n        if success:\n            # R\u00e9initialiser les tentatives en cas de succ\u00e8s\n            attempt.attempts_count = 0\n            attempt.locked_until = None\n        else:\n            # Incr\u00e9menter les tentatives\n&amp;gt;           attempt.attempts_count += 1\nE           TypeError: unsupported operand type(s) for +=: &amp;#x27;NoneType&amp;#x27; and &amp;#x27;int&amp;#x27;\n\napp\\api\\auth.py:47: TypeError\n&#34;}], &#34;tests/test_auth.py::test_login_invalid_password&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_auth.py::test_login_invalid_password&#34;, &#34;duration&#34;: &#34;588 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_auth.py::test_login_invalid_password&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;588 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    async def receive(self) -&amp;gt; T_co:\n        await checkpoint()\n        try:\n&amp;gt;           return self.receive_nowait()\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:98: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    def receive_nowait(self) -&amp;gt; T_co:\n        &amp;quot;&amp;quot;&amp;quot;\n        Receive the next item if it can be done without waiting.\n    \n        :return: the received item\n        :raises ~anyio.ClosedResourceError: if this send stream has been closed\n        :raises ~anyio.EndOfStream: if the buffer is empty and this stream has been\n            closed from the sending end\n        :raises ~anyio.WouldBlock: if there are no items in the buffer and no tasks\n            waiting to send\n    \n        &amp;quot;&amp;quot;&amp;quot;\n        if self._closed:\n            raise ClosedResourceError\n    \n        if self._state.waiting_senders:\n            # Get the item from the next sender\n            send_event, item = self._state.waiting_senders.popitem(last=False)\n            self._state.buffer.append(item)\n            send_event.set()\n    \n        if self._state.buffer:\n            return self._state.buffer.popleft()\n        elif not self._state.open_send_channels:\n            raise EndOfStream\n    \n&amp;gt;       raise WouldBlock\nE       anyio.WouldBlock\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:93: WouldBlock\n\nDuring handling of the above exception, another exception occurred:\n\nrequest = &amp;lt;starlette.requests.Request object at 0x0000022F79036CC0&amp;gt;\n\n    async def call_next(request: Request) -&amp;gt; Response:\n        app_exc: typing.Optional[Exception] = None\n        send_stream, recv_stream = anyio.create_memory_object_stream()\n    \n        async def receive_or_disconnect() -&amp;gt; Message:\n            if response_sent.is_set():\n                return {&amp;quot;type&amp;quot;: &amp;quot;http.disconnect&amp;quot;}\n    \n            async with anyio.create_task_group() as task_group:\n    \n                async def wrap(func: typing.Callable[[], typing.Awaitable[T]]) -&amp;gt; T:\n                    result = await func()\n                    task_group.cancel_scope.cancel()\n                    return result\n    \n                task_group.start_soon(wrap, response_sent.wait)\n                message = await wrap(request.receive)\n    \n            if response_sent.is_set():\n                return {&amp;quot;type&amp;quot;: &amp;quot;http.disconnect&amp;quot;}\n    \n            return message\n    \n        async def close_recv_stream_on_response_sent() -&amp;gt; None:\n            await response_sent.wait()\n            recv_stream.close()\n    \n        async def send_no_error(message: Message) -&amp;gt; None:\n            try:\n                await send_stream.send(message)\n            except anyio.BrokenResourceError:\n                # recv_stream has been closed, i.e. response_sent has been set.\n                return\n    \n        async def coro() -&amp;gt; None:\n            nonlocal app_exc\n    \n            async with send_stream:\n                try:\n                    await self.app(scope, receive_or_disconnect, send_no_error)\n                except Exception as exc:\n                    app_exc = exc\n    \n        task_group.start_soon(close_recv_stream_on_response_sent)\n        task_group.start_soon(coro)\n    \n        try:\n&amp;gt;           message = await recv_stream.receive()\n\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:78: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    async def receive(self) -&amp;gt; T_co:\n        await checkpoint()\n        try:\n            return self.receive_nowait()\n        except WouldBlock:\n            # Add ourselves in the queue\n            receive_event = Event()\n            container: list[T_co] = []\n            self._state.waiting_receivers[receive_event] = container\n    \n            try:\n                await receive_event.wait()\n            except get_cancelled_exc_class():\n                # Ignore the immediate cancellation if we already received an item, so as not to\n                # lose it\n                if not container:\n                    raise\n            finally:\n                self._state.waiting_receivers.pop(receive_event, None)\n    \n            if container:\n                return container[0]\n            else:\n&amp;gt;               raise EndOfStream\nE               anyio.EndOfStream\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:118: EndOfStream\n\nDuring handling of the above exception, another exception occurred:\n\nclient = &amp;lt;starlette.testclient.TestClient object at 0x0000022F78FFF5C0&amp;gt;\ntest_user = &amp;lt;app.models.models.User object at 0x0000022F78FFEBA0&amp;gt;\n\n    def test_login_invalid_password(client, test_user):\n        &amp;quot;&amp;quot;&amp;quot;Test connexion avec mot de passe invalide&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       response = client.post(&amp;quot;/api/v1/auth/login&amp;quot;, json={\n            &amp;quot;email&amp;quot;: &amp;quot;test@example.com&amp;quot;,\n            &amp;quot;password&amp;quot;: &amp;quot;WrongPassword&amp;quot;\n        })\n\ntests\\test_auth.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nvenv\\Lib\\site-packages\\starlette\\testclient.py:590: in post\n    return super().post(\nvenv\\Lib\\site-packages\\httpx\\_client.py:1132: in post\n    return self.request(\nvenv\\Lib\\site-packages\\starlette\\testclient.py:465: in request\n    return super().request(\nvenv\\Lib\\site-packages\\httpx\\_client.py:814: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\nvenv\\Lib\\site-packages\\httpx\\_client.py:901: in send\n    response = self._send_handling_auth(\nvenv\\Lib\\site-packages\\httpx\\_client.py:929: in _send_handling_auth\n    response = self._send_handling_redirects(\nvenv\\Lib\\site-packages\\httpx\\_client.py:966: in _send_handling_redirects\n    response = self._send_single_request(request)\nvenv\\Lib\\site-packages\\httpx\\_client.py:1002: in _send_single_request\n    response = transport.handle_request(request)\nvenv\\Lib\\site-packages\\starlette\\testclient.py:342: in handle_request\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\testclient.py:339: in handle_request\n    portal.call(self.app, scope, receive, send)\nvenv\\Lib\\site-packages\\anyio\\from_thread.py:277: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py:456: in result\n    return self.__get_result()\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py:401: in __get_result\n    raise self._exception\nvenv\\Lib\\site-packages\\anyio\\from_thread.py:217: in _call_func\n    retval = await retval\nvenv\\Lib\\site-packages\\fastapi\\applications.py:1106: in __call__\n    await super().__call__(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\applications.py:122: in __call__\n    await self.middleware_stack(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\errors.py:184: in __call__\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\errors.py:162: in __call__\n    await self.app(scope, receive, _send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:108: in __call__\n    response = await self.dispatch_func(request, call_next)\napp\\main.py:40: in add_security_headers\n    response = await call_next(request)\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:84: in call_next\n    raise app_exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:70: in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\nvenv\\Lib\\site-packages\\starlette\\middleware\\cors.py:83: in __call__\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\exceptions.py:79: in __call__\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\exceptions.py:68: in __call__\n    await self.app(scope, receive, sender)\nvenv\\Lib\\site-packages\\fastapi\\middleware\\asyncexitstack.py:20: in __call__\n    raise e\nvenv\\Lib\\site-packages\\fastapi\\middleware\\asyncexitstack.py:17: in __call__\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:718: in __call__\n    await route.handle(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:276: in handle\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:66: in app\n    response = await func(request)\nvenv\\Lib\\site-packages\\fastapi\\routing.py:274: in app\n    raw_response = await run_endpoint_function(\nvenv\\Lib\\site-packages\\fastapi\\routing.py:193: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\nvenv\\Lib\\site-packages\\starlette\\concurrency.py:41: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func, *args)\nvenv\\Lib\\site-packages\\anyio\\to_thread.py:33: in run_sync\n    return await get_asynclib().run_sync_in_worker_thread(\nvenv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py:877: in run_sync_in_worker_thread\n    return await future\nvenv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py:807: in run\n    result = context.run(func, *args)\napp\\api\\auth.py:83: in login\n    check_and_update_attempts(db, credentials.email, success=False)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ndb = &amp;lt;sqlalchemy.orm.session.Session object at 0x0000022F78EA7320&amp;gt;, email = &amp;#x27;test@example.com&amp;#x27;, success = False\n\n    def check_and_update_attempts(db: Session, email: str, success: bool = False):\n        &amp;quot;&amp;quot;&amp;quot;V\u00e9rifie et met \u00e0 jour les tentatives de connexion&amp;quot;&amp;quot;&amp;quot;\n        attempt = db.query(LoginAttempt).filter(LoginAttempt.email == email).first()\n    \n        if not attempt:\n            attempt = LoginAttempt(email=email)\n            db.add(attempt)\n    \n        now = datetime.utcnow()\n    \n        # V\u00e9rifier si le compte est bloqu\u00e9\n        if attempt.locked_until and attempt.locked_until &amp;gt; now:\n            minutes_remaining = int((attempt.locked_until - now).total_seconds() / 60)\n            raise HTTPException(\n                status_code=status.HTTP_403_FORBIDDEN,\n                detail={\n                    &amp;quot;message&amp;quot;: &amp;quot;Compte bloqu\u00e9&amp;quot;,\n                    &amp;quot;locked_until&amp;quot;: attempt.locked_until.isoformat(),\n                    &amp;quot;minutes_remaining&amp;quot;: minutes_remaining\n                }\n            )\n    \n        if success:\n            # R\u00e9initialiser les tentatives en cas de succ\u00e8s\n            attempt.attempts_count = 0\n            attempt.locked_until = None\n        else:\n            # Incr\u00e9menter les tentatives\n&amp;gt;           attempt.attempts_count += 1\nE           TypeError: unsupported operand type(s) for +=: &amp;#x27;NoneType&amp;#x27; and &amp;#x27;int&amp;#x27;\n\napp\\api\\auth.py:47: TypeError\n&#34;}], &#34;tests/test_auth.py::test_brute_force_protection&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_auth.py::test_brute_force_protection&#34;, &#34;duration&#34;: &#34;608 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_auth.py::test_brute_force_protection&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;608 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    async def receive(self) -&amp;gt; T_co:\n        await checkpoint()\n        try:\n&amp;gt;           return self.receive_nowait()\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:98: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    def receive_nowait(self) -&amp;gt; T_co:\n        &amp;quot;&amp;quot;&amp;quot;\n        Receive the next item if it can be done without waiting.\n    \n        :return: the received item\n        :raises ~anyio.ClosedResourceError: if this send stream has been closed\n        :raises ~anyio.EndOfStream: if the buffer is empty and this stream has been\n            closed from the sending end\n        :raises ~anyio.WouldBlock: if there are no items in the buffer and no tasks\n            waiting to send\n    \n        &amp;quot;&amp;quot;&amp;quot;\n        if self._closed:\n            raise ClosedResourceError\n    \n        if self._state.waiting_senders:\n            # Get the item from the next sender\n            send_event, item = self._state.waiting_senders.popitem(last=False)\n            self._state.buffer.append(item)\n            send_event.set()\n    \n        if self._state.buffer:\n            return self._state.buffer.popleft()\n        elif not self._state.open_send_channels:\n            raise EndOfStream\n    \n&amp;gt;       raise WouldBlock\nE       anyio.WouldBlock\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:93: WouldBlock\n\nDuring handling of the above exception, another exception occurred:\n\nrequest = &amp;lt;starlette.requests.Request object at 0x0000022F78E6A480&amp;gt;\n\n    async def call_next(request: Request) -&amp;gt; Response:\n        app_exc: typing.Optional[Exception] = None\n        send_stream, recv_stream = anyio.create_memory_object_stream()\n    \n        async def receive_or_disconnect() -&amp;gt; Message:\n            if response_sent.is_set():\n                return {&amp;quot;type&amp;quot;: &amp;quot;http.disconnect&amp;quot;}\n    \n            async with anyio.create_task_group() as task_group:\n    \n                async def wrap(func: typing.Callable[[], typing.Awaitable[T]]) -&amp;gt; T:\n                    result = await func()\n                    task_group.cancel_scope.cancel()\n                    return result\n    \n                task_group.start_soon(wrap, response_sent.wait)\n                message = await wrap(request.receive)\n    \n            if response_sent.is_set():\n                return {&amp;quot;type&amp;quot;: &amp;quot;http.disconnect&amp;quot;}\n    \n            return message\n    \n        async def close_recv_stream_on_response_sent() -&amp;gt; None:\n            await response_sent.wait()\n            recv_stream.close()\n    \n        async def send_no_error(message: Message) -&amp;gt; None:\n            try:\n                await send_stream.send(message)\n            except anyio.BrokenResourceError:\n                # recv_stream has been closed, i.e. response_sent has been set.\n                return\n    \n        async def coro() -&amp;gt; None:\n            nonlocal app_exc\n    \n            async with send_stream:\n                try:\n                    await self.app(scope, receive_or_disconnect, send_no_error)\n                except Exception as exc:\n                    app_exc = exc\n    \n        task_group.start_soon(close_recv_stream_on_response_sent)\n        task_group.start_soon(coro)\n    \n        try:\n&amp;gt;           message = await recv_stream.receive()\n\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:78: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = MemoryObjectReceiveStream(_state=MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receive_channels=1, waiting_receivers=OrderedDict(), waiting_senders=OrderedDict()), _closed=False)\n\n    async def receive(self) -&amp;gt; T_co:\n        await checkpoint()\n        try:\n            return self.receive_nowait()\n        except WouldBlock:\n            # Add ourselves in the queue\n            receive_event = Event()\n            container: list[T_co] = []\n            self._state.waiting_receivers[receive_event] = container\n    \n            try:\n                await receive_event.wait()\n            except get_cancelled_exc_class():\n                # Ignore the immediate cancellation if we already received an item, so as not to\n                # lose it\n                if not container:\n                    raise\n            finally:\n                self._state.waiting_receivers.pop(receive_event, None)\n    \n            if container:\n                return container[0]\n            else:\n&amp;gt;               raise EndOfStream\nE               anyio.EndOfStream\n\nvenv\\Lib\\site-packages\\anyio\\streams\\memory.py:118: EndOfStream\n\nDuring handling of the above exception, another exception occurred:\n\nclient = &amp;lt;starlette.testclient.TestClient object at 0x0000022F79037F80&amp;gt;\ntest_user = &amp;lt;app.models.models.User object at 0x0000022F78FFF9B0&amp;gt;\n\n    def test_brute_force_protection(client, test_user):\n        &amp;quot;&amp;quot;&amp;quot;Test blocage apr\u00e8s 5 tentatives \u00e9chou\u00e9es&amp;quot;&amp;quot;&amp;quot;\n        # Faire 5 tentatives \u00e9chou\u00e9es\n        for i in range(5):\n&amp;gt;           response = client.post(&amp;quot;/api/v1/auth/login&amp;quot;, json={\n                &amp;quot;email&amp;quot;: &amp;quot;test@example.com&amp;quot;,\n                &amp;quot;password&amp;quot;: &amp;quot;WrongPassword&amp;quot;\n            })\n\ntests\\test_auth.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nvenv\\Lib\\site-packages\\starlette\\testclient.py:590: in post\n    return super().post(\nvenv\\Lib\\site-packages\\httpx\\_client.py:1132: in post\n    return self.request(\nvenv\\Lib\\site-packages\\starlette\\testclient.py:465: in request\n    return super().request(\nvenv\\Lib\\site-packages\\httpx\\_client.py:814: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\nvenv\\Lib\\site-packages\\httpx\\_client.py:901: in send\n    response = self._send_handling_auth(\nvenv\\Lib\\site-packages\\httpx\\_client.py:929: in _send_handling_auth\n    response = self._send_handling_redirects(\nvenv\\Lib\\site-packages\\httpx\\_client.py:966: in _send_handling_redirects\n    response = self._send_single_request(request)\nvenv\\Lib\\site-packages\\httpx\\_client.py:1002: in _send_single_request\n    response = transport.handle_request(request)\nvenv\\Lib\\site-packages\\starlette\\testclient.py:342: in handle_request\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\testclient.py:339: in handle_request\n    portal.call(self.app, scope, receive, send)\nvenv\\Lib\\site-packages\\anyio\\from_thread.py:277: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py:456: in result\n    return self.__get_result()\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py:401: in __get_result\n    raise self._exception\nvenv\\Lib\\site-packages\\anyio\\from_thread.py:217: in _call_func\n    retval = await retval\nvenv\\Lib\\site-packages\\fastapi\\applications.py:1106: in __call__\n    await super().__call__(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\applications.py:122: in __call__\n    await self.middleware_stack(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\errors.py:184: in __call__\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\errors.py:162: in __call__\n    await self.app(scope, receive, _send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:108: in __call__\n    response = await self.dispatch_func(request, call_next)\napp\\main.py:40: in add_security_headers\n    response = await call_next(request)\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:84: in call_next\n    raise app_exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\base.py:70: in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\nvenv\\Lib\\site-packages\\starlette\\middleware\\cors.py:83: in __call__\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\middleware\\exceptions.py:79: in __call__\n    raise exc\nvenv\\Lib\\site-packages\\starlette\\middleware\\exceptions.py:68: in __call__\n    await self.app(scope, receive, sender)\nvenv\\Lib\\site-packages\\fastapi\\middleware\\asyncexitstack.py:20: in __call__\n    raise e\nvenv\\Lib\\site-packages\\fastapi\\middleware\\asyncexitstack.py:17: in __call__\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:718: in __call__\n    await route.handle(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:276: in handle\n    await self.app(scope, receive, send)\nvenv\\Lib\\site-packages\\starlette\\routing.py:66: in app\n    response = await func(request)\nvenv\\Lib\\site-packages\\fastapi\\routing.py:274: in app\n    raw_response = await run_endpoint_function(\nvenv\\Lib\\site-packages\\fastapi\\routing.py:193: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\nvenv\\Lib\\site-packages\\starlette\\concurrency.py:41: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func, *args)\nvenv\\Lib\\site-packages\\anyio\\to_thread.py:33: in run_sync\n    return await get_asynclib().run_sync_in_worker_thread(\nvenv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py:877: in run_sync_in_worker_thread\n    return await future\nvenv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py:807: in run\n    result = context.run(func, *args)\napp\\api\\auth.py:83: in login\n    check_and_update_attempts(db, credentials.email, success=False)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ndb = &amp;lt;sqlalchemy.orm.session.Session object at 0x0000022F79036EA0&amp;gt;, email = &amp;#x27;test@example.com&amp;#x27;, success = False\n\n    def check_and_update_attempts(db: Session, email: str, success: bool = False):\n        &amp;quot;&amp;quot;&amp;quot;V\u00e9rifie et met \u00e0 jour les tentatives de connexion&amp;quot;&amp;quot;&amp;quot;\n        attempt = db.query(LoginAttempt).filter(LoginAttempt.email == email).first()\n    \n        if not attempt:\n            attempt = LoginAttempt(email=email)\n            db.add(attempt)\n    \n        now = datetime.utcnow()\n    \n        # V\u00e9rifier si le compte est bloqu\u00e9\n        if attempt.locked_until and attempt.locked_until &amp;gt; now:\n            minutes_remaining = int((attempt.locked_until - now).total_seconds() / 60)\n            raise HTTPException(\n                status_code=status.HTTP_403_FORBIDDEN,\n                detail={\n                    &amp;quot;message&amp;quot;: &amp;quot;Compte bloqu\u00e9&amp;quot;,\n                    &amp;quot;locked_until&amp;quot;: attempt.locked_until.isoformat(),\n                    &amp;quot;minutes_remaining&amp;quot;: minutes_remaining\n                }\n            )\n    \n        if success:\n            # R\u00e9initialiser les tentatives en cas de succ\u00e8s\n            attempt.attempts_count = 0\n            attempt.locked_until = None\n        else:\n            # Incr\u00e9menter les tentatives\n&amp;gt;           attempt.attempts_count += 1\nE           TypeError: unsupported operand type(s) for +=: &amp;#x27;NoneType&amp;#x27; and &amp;#x27;int&amp;#x27;\n\napp\\api\\auth.py:47: TypeError\n&#34;}], &#34;tests/test_auth.py::test_login_inactive_user&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_auth.py::test_login_inactive_user&#34;, &#34;duration&#34;: &#34;596 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_auth.py::test_login_inactive_user&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;596 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_auth.py::test_token_verification&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_auth.py::test_token_verification&#34;, &#34;duration&#34;: &#34;604 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_auth.py::test_token_verification&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;604 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_auth.py::test_invalid_token&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_auth.py::test_invalid_token&#34;, &#34;duration&#34;: &#34;99 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_auth.py::test_invalid_token&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;99 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_match_in_event_create_rejects_invalid_court_number&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_match_in_event_create_rejects_invalid_court_number&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_match_in_event_create_rejects_invalid_court_number&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_match_in_event_create_rejects_same_team&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_match_in_event_create_rejects_same_team&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_match_in_event_create_rejects_same_team&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_event_create_rejects_duplicate_courts&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_event_create_rejects_duplicate_courts&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_event_create_rejects_duplicate_courts&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_event_create_rejects_duplicate_teams&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_event_create_rejects_duplicate_teams&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_event_create_rejects_duplicate_teams&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_create_event_requires_admin&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_create_event_requires_admin&#34;, &#34;duration&#34;: &#34;365 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_create_event_requires_admin&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;365 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_create_event_creates_matches&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_create_event_creates_matches&#34;, &#34;duration&#34;: &#34;452 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_create_event_creates_matches&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;452 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_get_events_filters_by_month&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_get_events_filters_by_month&#34;, &#34;duration&#34;: &#34;534 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_get_events_filters_by_month&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;534 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_update_event_rejects_completed_match&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_update_event_rejects_completed_match&#34;, &#34;duration&#34;: &#34;457 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_update_event_rejects_completed_match&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;457 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_event.py::test_get_event_returns_404_for_missing_id&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_event.py::test_get_event_returns_404_for_missing_id&#34;, &#34;duration&#34;: &#34;452 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_event.py::test_get_event_returns_404_for_missing_id&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;452 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_match_create_rejects_invalid_court_number&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_match_create_rejects_invalid_court_number&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_match_create_rejects_invalid_court_number&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_match_create_rejects_same_team&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_match_create_rejects_same_team&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_match_create_rejects_same_team&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_match_update_rejects_invalid_status&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_match_update_rejects_invalid_status&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_match_update_rejects_invalid_status&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_match_update_rejects_invalid_score_format&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_match_update_rejects_invalid_score_format&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_match_update_rejects_invalid_score_format&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_create_match_requires_admin&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_create_match_requires_admin&#34;, &#34;duration&#34;: &#34;500 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_create_match_requires_admin&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;500 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_create_match_creates_event_when_missing&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_create_match_creates_event_when_missing&#34;, &#34;duration&#34;: &#34;460 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_create_match_creates_event_when_missing&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;460 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_create_match_rejects_duplicate_court_in_event&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_create_match_rejects_duplicate_court_in_event&#34;, &#34;duration&#34;: &#34;401 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_create_match_rejects_duplicate_court_in_event&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;401 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_get_matches_filters_upcoming&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_get_matches_filters_upcoming&#34;, &#34;duration&#34;: &#34;525 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_get_matches_filters_upcoming&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;525 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_get_matches_my_matches_filters_to_player_team&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_get_matches_my_matches_filters_to_player_team&#34;, &#34;duration&#34;: &#34;520 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_get_matches_my_matches_filters_to_player_team&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;520 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_update_match_rejects_date_change_when_not_upcoming&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_update_match_rejects_date_change_when_not_upcoming&#34;, &#34;duration&#34;: &#34;352 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_update_match_rejects_date_change_when_not_upcoming&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;352 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_delete_match_rejects_non_upcoming&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_delete_match_rejects_non_upcoming&#34;, &#34;duration&#34;: &#34;469 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_delete_match_rejects_non_upcoming&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;469 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_matches.py::test_get_match_returns_404_for_missing_id&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_matches.py::test_get_match_returns_404_for_missing_id&#34;, &#34;duration&#34;: &#34;432 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_matches.py::test_get_match_returns_404_for_missing_id&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;432 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_player.py::test_player_create_accepts_valid_names_and_license&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_player.py::test_player_create_accepts_valid_names_and_license&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_player.py::test_player_create_accepts_valid_names_and_license&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_player.py::test_player_create_rejects_invalid_license_format&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_player.py::test_player_create_rejects_invalid_license_format&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_player.py::test_player_create_rejects_invalid_license_format&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_player.py::test_player_create_rejects_invalid_first_name_characters&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_player.py::test_player_create_rejects_invalid_first_name_characters&#34;, &#34;duration&#34;: &#34;3 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_player.py::test_player_create_rejects_invalid_first_name_characters&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;3 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_player.py::test_player_update_allows_partial_payload&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_player.py::test_player_update_allows_partial_payload&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_player.py::test_player_update_allows_partial_payload&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_player.py::test_player_update_rejects_invalid_last_name_characters&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_player.py::test_player_update_rejects_invalid_last_name_characters&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_player.py::test_player_update_rejects_invalid_last_name_characters&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_player.py::test_player_response_from_attributes&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_player.py::test_player_response_from_attributes&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_player.py::test_player_response_from_attributes&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_profile.py::test_get_my_profile&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_profile.py::test_get_my_profile&#34;, &#34;duration&#34;: &#34;756 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_profile.py::test_get_my_profile&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;756 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_profile.py::test_update_my_profile&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_profile.py::test_update_my_profile&#34;, &#34;duration&#34;: &#34;750 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_profile.py::test_update_my_profile&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;750 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_profile.py::test_upload_and_delete_photo&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_profile.py::test_upload_and_delete_photo&#34;, &#34;duration&#34;: &#34;721 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_profile.py::test_upload_and_delete_photo&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;721 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_profile.py::test_change_password&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_profile.py::test_change_password&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_profile.py::test_change_password&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_result.py::test_parse_score_counts_sets_and_skips_invalid_segments&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_result.py::test_parse_score_counts_sets_and_skips_invalid_segments&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_result.py::test_parse_score_counts_sets_and_skips_invalid_segments&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_result.py::test_determine_winner_handles_wins_and_draws&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_result.py::test_determine_winner_handles_wins_and_draws&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_result.py::test_determine_winner_handles_wins_and_draws&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_result.py::test_get_my_results_returns_ordered_results_and_stats&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_result.py::test_get_my_results_returns_ordered_results_and_stats&#34;, &#34;duration&#34;: &#34;770 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_result.py::test_get_my_results_returns_ordered_results_and_stats&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;770 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_result.py::test_get_my_results_returns_empty_when_player_has_no_teams&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_result.py::test_get_my_results_returns_empty_when_player_has_no_teams&#34;, &#34;duration&#34;: &#34;651 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_result.py::test_get_my_results_returns_empty_when_player_has_no_teams&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;651 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_result.py::test_get_my_results_returns_404_when_player_missing&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_result.py::test_get_my_results_returns_404_when_player_missing&#34;, &#34;duration&#34;: &#34;595 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_result.py::test_get_my_results_returns_404_when_player_missing&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;595 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_result.py::test_get_rankings_aggregates_company_stats&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_result.py::test_get_rankings_aggregates_company_stats&#34;, &#34;duration&#34;: &#34;659 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_result.py::test_get_rankings_aggregates_company_stats&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;659 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_security.py::test_password_hashing&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_security.py::test_password_hashing&#34;, &#34;duration&#34;: &#34;670 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_security.py::test_password_hashing&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;670 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_security.py::test_jwt_token_creation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_security.py::test_jwt_token_creation&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_security.py::test_jwt_token_creation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_security.py::test_jwt_token_decode&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_security.py::test_jwt_token_decode&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_security.py::test_jwt_token_decode&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_security.py::test_jwt_invalid_token&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_security.py::test_jwt_invalid_token&#34;, &#34;duration&#34;: &#34;3 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_security.py::test_jwt_invalid_token&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;3 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;Rapport.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > .col-result')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > .col-result')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+  </body>
+</html>

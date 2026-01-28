@@ -1,0 +1,90 @@
+__pycache__/
+node_modules/
+dist/
+.dev.db
+.vscode/
+
+.DS_Store
+node_modules
+/dist
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.pkl
+*.egg-info/
+*.sqlite3
+*.db
+
+# Virtual environments
+venv/
+.env
+.env.*
+*.env
+
+# Pytest and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+
+
+# Node dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.local
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/results/
+
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.code-workspace
+
+
+#htmlcov-report/
+htmlcov/
