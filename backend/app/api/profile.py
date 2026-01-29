@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File
+from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, BackgroundTasks
 from sqlalchemy.orm import Session
 import os
 import shutil
@@ -9,6 +9,7 @@ from app.models.models import User, Player
 from app.schemas.profile import ProfileResponse, ProfileUpdate, PasswordChange
 from app.api.deps import get_current_user
 from app.core.security import verify_password, get_password_hash
+from app.services.emailjs import send_account_change_email
 
 router = APIRouter(prefix="/profile", tags=["profile"])
 
@@ -36,6 +37,7 @@ def get_my_profile(
 @router.put("/me", response_model=ProfileResponse)
 def update_my_profile(
     profile_data: ProfileUpdate,
+    background_tasks: BackgroundTasks,
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
@@ -46,18 +48,22 @@ def update_my_profile(
         raise HTTPException(status_code=404, detail="Profil joueur non trouvé")
     
     update_data = profile_data.dict(exclude_unset=True)
-    
+
+    email_changed = False
+
     # Mise à jour de l'email dans User
     if 'email' in update_data:
-        # Vérifier unicité
-        existing = db.query(User).filter(
-            User.email == update_data['email'],
-            User.id != current_user.id
-        ).first()
-        if existing:
-            raise HTTPException(status_code=409, detail="Cet email est déjà utilisé")
-        
-        current_user.email = update_data['email']
+        if update_data['email'] != current_user.email:
+            # Vérifier unicité
+            existing = db.query(User).filter(
+                User.email == update_data['email'],
+                User.id != current_user.id
+            ).first()
+            if existing:
+                raise HTTPException(status_code=409, detail="Cet email est déjà utilisé")
+
+            current_user.email = update_data['email']
+            email_changed = True
         update_data.pop('email')
     
     # Mise à jour des autres champs dans Player
@@ -67,6 +73,15 @@ def update_my_profile(
     db.commit()
     db.refresh(current_user)
     db.refresh(player)
+
+    if email_changed:
+        full_name = f"{player.first_name} {player.last_name}".strip()
+        background_tasks.add_task(
+            send_account_change_email,
+            to_email=current_user.email,
+            to_name=full_name if full_name else None,
+            change_type="email",
+        )
     
     return {
         "user": current_user,
@@ -154,6 +169,7 @@ def delete_profile_photo(
 @router.post("/me/change-password")
 def change_password(
     password_data: PasswordChange,
+    background_tasks: BackgroundTasks,
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
@@ -177,5 +193,12 @@ def change_password(
     current_user.password_hash = get_password_hash(password_data.new_password)
     current_user.must_change_password = False
     db.commit()
+
+    background_tasks.add_task(
+        send_account_change_email,
+        to_email=current_user.email,
+        to_name=current_user.email,
+        change_type="password",
+    )
     
     return {"message": "Mot de passe modifié avec succès"}

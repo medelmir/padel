@@ -22,6 +22,15 @@ class PlayerCreate(PlayerBase):
     birth_date: Optional[date] = None
 
 
+    @validator('birth_date')
+    def validate_birth_date(cls, v):
+        if v:
+            today = date.today()
+            if v > today:
+                raise ValueError('La date de naissance ne peut pas etre dans le futur')
+        return v
+
+
 class PlayerUpdate(BaseModel):
     first_name: Optional[str] = Field(None, min_length=2, max_length=50)
     last_name: Optional[str] = Field(None, min_length=2, max_length=50)
@@ -33,6 +42,15 @@ class PlayerUpdate(BaseModel):
     def validate_name(cls, v):
         if v and not re.match(r'^[a-zA-ZÀ-ÿ\s\'-]+$', v):
             raise ValueError('Seuls les lettres, espaces, tirets et apostrophes sont autorisés')
+        return v
+
+
+    @validator('birth_date')
+    def validate_birth_date(cls, v):
+        if v:
+            today = date.today()
+            if v > today:
+                raise ValueError('La date de naissance ne peut pas etre dans le futur')
         return v
 
 

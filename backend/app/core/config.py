@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from typing import List
+from typing import List, Optional
 
 class Settings(BaseSettings):
     database_url: str = "sqlite:///./padel_corpo.db"
@@ -7,6 +7,10 @@ class Settings(BaseSettings):
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 1440
     allowed_origins: str = "http://localhost:5173"
+    emailjs_service_id: Optional[str] = None
+    emailjs_public_key: Optional[str] = None
+    emailjs_private_key: Optional[str] = None
+    emailjs_template_account_change: Optional[str] = None
     
     model_config = SettingsConfigDict(
         env_file=".env",

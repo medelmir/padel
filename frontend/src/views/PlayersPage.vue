@@ -163,6 +163,7 @@
               <input 
                 v-model="form.birth_date" 
                 type="date"
+                :max="maxBirthDate"
                 class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -259,6 +260,16 @@ const fieldError = (field) => {
   return validationMessage(field)
 }
 
+const getTodayDateString = () => {
+  const date = new Date()
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+const maxBirthDate = ref(getTodayDateString())
+
 const formatErrorMessage = (detail) => {
   if (Array.isArray(detail) && detail.length) {
     const first = detail[0]
@@ -340,6 +351,12 @@ const savePlayer = async () => {
   if (firstInvalid) {
     fieldsToCheck.forEach((field) => markTouched(field))
     error.value = validationMessage(firstInvalid)
+    saving.value = false
+    return
+  }
+
+  if (form.value.birth_date && form.value.birth_date > maxBirthDate.value) {
+    error.value = 'La date de naissance ne peut pas etre dans le futur.'
     saving.value = false
     return
   }

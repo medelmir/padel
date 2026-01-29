@@ -44,6 +44,8 @@ def check_and_update_attempts(db: Session, email: str, success: bool = False):
         attempt.locked_until = None
     else:
         # Incrémenter les tentatives
+        if attempt.attempts_count is None:
+            attempt.attempts_count = 0
         attempt.attempts_count += 1
         attempt.last_attempt = now
         
